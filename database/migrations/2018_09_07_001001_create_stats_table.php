@@ -17,10 +17,6 @@ class CreateStatsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->boolean('is_battle_only');
-            $table->integer('affecting_natures'); // contemplate pivot table
-            $table->integer('characteristics'); // contemplate pivot table
-            $table->integer('affecting_moves'); // contemplate pivot table
-            $table->integer('move_damage_class'); // contemplate pivot table
             $table->timestamps();
         });
     }
