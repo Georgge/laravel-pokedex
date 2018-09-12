@@ -1,0 +1,57 @@
+// Imports
+@import 'nib'
+
+// general variables
+$pokeballSize = 150px
+$borderBall = 4px
+
+// colors variable
+$red = #DF3F22
+$white = #fff
+$black = #1d1d1d
+$backgound = #f3c505
+
+// normalize
+normalize-css()
+
+// general classes
+.wrapper
+  width: 100vw
+  height: 100vh
+  background: $backgound
+  display: flex
+  justify-content: space-around
+  align-items: center
+
+.pokeball
+  width: $pokeballSize
+  height: $pokeballSize
+  border-radius: 50%
+  position: relative
+  &__top
+    width: 100%
+    height: 50%
+    background-color: $red
+    border-top-left-radius: $pokeballSize * 2
+    border-top-right-radius: $pokeballSize * 2
+    border-left: solid $borderBall $black
+    border-top: solid $borderBall $black
+    border-right: solid $borderBall $black
+    border-bottom: solid ($borderBall / 2) $black
+    box-sizing: border-box
+  &__bottom
+    width: 100%
+    height: 50%
+    background-color: $white
+    border-bottom-left-radius: $pokeballSize * 2
+    border-bottom-right-radius: $pokeballSize * 2
+    border-left: solid $borderBall $black
+    border-bottom: solid $borderBall $black
+    border-right: solid $borderBall $black
+    border-top: solid ($borderBall / 2) $black
+    box-sizing: border-box
+  >img
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
